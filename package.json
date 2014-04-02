@@ -1,0 +1,20 @@
+{
+  "name": "animix-player",
+  "version": "2.0.1",
+  "description": "Animix Player",
+  "author": "Ninetails - Carlos Kazuo <ninetails@radioanimix.com.br>",
+  "devDependencies": {
+    "gulp": "~3.5.5",
+    "gulp-clean": "~0.2.4",
+    "gulp-coffee": "~1.4.1",
+    "gulp-compass": "~1.1.5",
+    "gulp-concat": "~2.1.7",
+    "gulp-livereload": "~1.2.0",
+    "gulp-load-plugins": "~0.4.0",
+    "gulp-notify": "~1.2.0",
+    "gulp-rename": "~1.2.0",
+    "gulp-uglify": "~0.2.1",
+    "gulp-util": "~2.2.14",
+    "tiny-lr": "0.0.5"
+  }
+}
