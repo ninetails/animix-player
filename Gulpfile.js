@@ -24,8 +24,23 @@ gulp.task('scripts-app', function() {
     .pipe(plugins.livereload(server));
 });
 
-gulp.task('clean', function() {
-  return gulp.src(['js', '300/200/assets/1/css'], {read: false})
+gulp.task('scripts-app', function() {
+  return gulp.src('_src/app/coffee/**/*.coffee')
+    .pipe(plugins.coffee({bare: true}))
+    .pipe(gulp.dest('js')) // removable
+    .pipe(plugins.rename({suffix: '.min'}))
+    .pipe(plugins.uglify({preserveComments: 'some'}))
+    .pipe(gulp.dest('js'))
+    .pipe(plugins.livereload(server));
+});
+
+gulp.task('clean-app', function() {
+  return gulp.src('js', {read: false})
+    .pipe(plugins.clean());
+});
+
+gulp.task('clean-assets-300-200-1', function() {
+  return gulp.src('300/200/assets/1', {read: false})
     .pipe(plugins.clean());
 });
 
@@ -39,5 +54,7 @@ gulp.task('watch', function() {
     gulp.watch('_src/300/200/assets/1/sass/**/*.sass', ['style-assets-300-200-1']);
     // Watch .js files
     gulp.watch('_src/app/coffee/**/*.coffee', ['scripts-app']);
+    // Watch .html files
+    gulp.watch('300/200/**/*.html', ['html']);
   });
 });

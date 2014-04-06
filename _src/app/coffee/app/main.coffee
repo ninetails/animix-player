@@ -1,5 +1,4 @@
-
-requirejs ['jquery', 'modernizr', 'bootstrap'], ($) ->
+window.requirejs ['jquery', 'modernizr', 'bootstrap'], ($) ->
   # bootstrap css fallback
   if $('h1').is ':visible'
     do (d = document) ->
@@ -9,5 +8,11 @@ requirejs ['jquery', 'modernizr', 'bootstrap'], ($) ->
       l.href = '/2/vendors/bootstrap/3.1.1/css/bootstrap.min.css'
       h.appendChild l
       return
+
+  # player
+  $( () ->
+    requirejs ['app/main/player.min']
+    return
+  )
 
   return
