@@ -30,11 +30,12 @@ do (window) ->
             '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min',
             'vendors/modernizr/2.7.1/modernizr.min'
           ]
+          livereload: '//' + ( location.host || 'localhost' ).split(':')[0] + ':35729/livereload.js?snipver=1'
         shim:
           'bootstrap': ['jquery']
 
       # load app/main
-      window.requirejs ['app/main.min']
+      window.requirejs ['app/main']
 
       # clear timeout
       window.clearInterval tid

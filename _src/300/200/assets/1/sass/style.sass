@@ -1,0 +1,149 @@
+@import 'partials/base'
+
+body
+  background: $base-background
+  color: $base-color
+  font: $base-font-weight $base-font-size $base-font-family
+  line-height: $base-line-height
+
+.sprite
+  background: url('../images/sprite.gif') 0 0 no-repeat
+  display: block
+  outline: none
+  overflow: hidden
+  text-indent: -9000px
+
+.canvas
+  background: url('../images/bg.jpg') 100px 20px no-repeat $base-background
+  display: block
+  height: 200px
+  overflow: hidden
+  width: 300px
+
+.player
+  height: 100%
+
+.info
+  display: block
+  height: 170px / 200px * 100%
+  padding-top: 2.5%
+
+.program-link
+  .info &
+    display: block
+    float: left
+    width: 140px / 300px * 100%
+.program-image
+  .info &
+    background: none repeat scroll 0 0 $base-background
+    border: 2px solid #F4C40B
+    border-radius: 5%
+    display: block
+    margin: 0 auto
+    width: 130px / 140px * 100%
+
+.data,
+.media
+  .canvas &
+    display: block
+    float: right
+    width: 160px / 300px * 100%
+
+.canvas
+  .kicker
+    font-size: .7em
+    margin: 0
+.data
+  .canvas &
+    .title
+      color: $color-animix-yellow
+      display: block
+      font-size: 1.1em
+    .subtitle
+      display: block
+      font-size: .8em
+      .caster
+        color: $color-animix-red
+        font-size: 1.2em
+        font-style: normal
+    .requests
+      +background-image(linear-gradient(#fff, #ccc))
+      display: block
+      margin: 5px / 160px * 100% auto 0
+      width: 90%
+
+.media
+  .canvas &
+    .list
+      list-style: none
+      margin: 5px / 160px * 100% 0 0
+      padding: 0
+    .item
+      display: inline-block
+      float: left
+      height: 16px / 170px * 100%
+      margin-left: 20px / 170px * 100%
+      width: 16px / 170px * 100%
+    .itunes
+      background-position: -40px -20px
+      &:hover
+        background-position: -40px 0
+    .real
+      background-position: -20px -20px
+      &:hover
+        background-position: -20px 0
+    .winamp
+      background-position: 0 -20px
+      &:hover
+        background-position: 0 0
+    .wmp
+      background-position: -60px -20px
+      &:hover
+        background-position: -60px 0
+
+.bar
+  +background-image(linear-gradient(#111, #000))
+  height: 30px / 200px * 100%
+  position: relative
+  width: 100%
+  .player-control
+    height: 100%
+    left: 0
+    position: absolute
+    top: 0
+    width: 30px / 300px * 100%
+    // &::after
+    //   @include border-radius(0 4px 4px 0)
+    //   background: #ebebeb
+    //   border-bottom: 1px solid #000
+    //   border-right: 1px solid #000
+    //   border-top: 1px solid #000
+    //   content: ''
+    //   display: none
+    //   font-family: $base-font-family
+    //   font-weight: $bold
+    //   height: 34px / 30px * 100%
+    //   left: 26px / 30px * 100%
+    //   padding: .7em 25% 0 30%
+    //   position: absolute
+    //   top: -2px
+    // &:hover::after
+    //   display: block
+    // &.pause::after
+    //   content: 'Parar'
+    // &.play::after
+    //   content: 'Reproduzir'
+  .on-air
+    color: $color-animix-yellow
+    font-size: .9em
+    font-weight: $bold
+    height: 20px / 30px * 100%
+    margin: 0 0 0 40px / 300px * 100%
+    padding-top: .4em
+    width: 260px / 300px * 100%
+  .marquee
+    color: $base-color
+    display: inline-block
+    float: right
+    font-weight: $regular
+    width: 73%

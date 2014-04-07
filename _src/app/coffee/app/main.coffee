@@ -1,8 +1,8 @@
-window.requirejs ['jquery', 'modernizr', 'bootstrap'], ($) ->
+window.requirejs ['jquery', 'modernizr', 'bootstrap', 'livereload'], ($) ->
   # bootstrap css fallback
   if $('h1').is ':visible'
     do (d = document) ->
-      l = d.createElement(t)
+      l = d.createElement('div')
       h = d.getElementsByTagName( 'head' )[0]
       l.rel = 'stylesheet'
       l.href = '/2/vendors/bootstrap/3.1.1/css/bootstrap.min.css'

@@ -1,5 +1,7 @@
 js
-2/300/200/assets/1
+300/200/assets/1
+_src/300/200/assets/1/images
 
 node_modules
 vendors
+.sass-cache

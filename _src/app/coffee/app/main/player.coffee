@@ -16,13 +16,12 @@ window.requirejs ['jquery'], ($) ->
   mount_player = (opts) ->
     # load player
     container = $ document.createElement 'div'
-      .attr 'id', 'player'
+      .attr 'id', 'audio'
       .css
         'display': 'none'
 
     player = $ document.createElement 'audio'
-      .attr 'src', config.src
-
+      .attr 'src', opts.player.embed
     player.attr('autoplay', '') if config.autoplay
 
     container.append player

@@ -15,6 +15,8 @@
     "gulp-rename": "~1.2.0",
     "gulp-uglify": "~0.2.1",
     "gulp-util": "~2.2.14",
-    "tiny-lr": "0.0.5"
+    "tiny-lr": "0.0.5",
+    "gulp-imagemin": "^0.2.0",
+    "image-min": "^0.3.0"
   }
 }
