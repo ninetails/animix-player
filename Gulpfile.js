@@ -22,7 +22,7 @@ gulp.task('clean-assets-300-200-1', function() {
 gulp.task('scripts-app', ['clean-app'], function() {
   return gulp.src('_src/app/coffee/**/*.coffee')
     .pipe(plugins.coffee({bare: true}))
-    .pipe(gulp.dest('js')) // removable
+    //.pipe(gulp.dest('js')) // removable
     .pipe(plugins.rename({suffix: '.min'}))
     .pipe(plugins.uglify({preserveComments: 'some'}))
     .pipe(gulp.dest('js'))

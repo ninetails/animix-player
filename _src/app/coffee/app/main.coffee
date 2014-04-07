@@ -1,4 +1,4 @@
-window.requirejs ['jquery', 'modernizr', 'bootstrap', 'livereload'], ($) ->
+window.requirejs ['jquery', 'modernizr', 'bootstrap'], ($) ->
   # bootstrap css fallback
   if $('h1').is ':visible'
     do (d = document) ->

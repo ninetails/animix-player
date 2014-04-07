@@ -26,7 +26,7 @@ body
 .info
   display: block
   height: 170px / 200px * 100%
-  padding-top: 2.5%
+  padding-top: 1em
 
 .program-link
   .info &
@@ -39,6 +39,7 @@ body
     border: 2px solid #F4C40B
     border-radius: 5%
     display: block
+    height: 130px / 170px * 100%
     margin: 0 auto
     width: 130px / 140px * 100%
 
@@ -141,9 +142,11 @@ body
     margin: 0 0 0 40px / 300px * 100%
     padding-top: .4em
     width: 260px / 300px * 100%
-  .marquee
-    color: $base-color
-    display: inline-block
-    float: right
-    font-weight: $regular
-    width: 73%
+    .marquee
+      color: $base-color
+      display: inline-block
+      float: right
+      font-weight: $regular
+      width: 73%
+      &.full
+        width: 100%
