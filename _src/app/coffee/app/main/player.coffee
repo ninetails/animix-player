@@ -54,6 +54,13 @@ window.requirejs ['jquery', 'app/main/marquee.min'], ($) ->
             .addClass 'play'
             .addClass 'glyphicon-play'
           $('audio').get(0).pause()
+        return
+
+    $ '.requests'
+      .bind 'click', (e) ->
+        e.preventDefault()
+        window.open "http://www.radioanimix.com.br/pedido/", "Pedidos de músicas", "width=480,resizable,scrollbars,status"
+        return
     return
 
   player_fill_info = (opts) ->

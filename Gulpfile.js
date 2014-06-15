@@ -19,7 +19,7 @@ gulp.task('clean-assets-300-200-1', function() {
     .pipe(plugins.clean());
 });
 
-gulp.task('scripts-app', ['clean-app'], function() {
+gulp.task('scripts-app', function() { //['clean-app']
   return gulp.src('_src/app/coffee/**/*.coffee')
     .pipe(plugins.coffee({bare: true}))
     //.pipe(gulp.dest('js')) // removable
@@ -50,6 +50,8 @@ gulp.task('html', function() {
   return gulp.src('./**/*.html')
     .pipe(plugins.livereload(server));
 });
+
+gulp.task('default', ['style-assets-300-200-1', 'scripts-app', 'images']);
 
 
 gulp.task('watch', function() {
